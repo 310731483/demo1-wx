@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "page/component/pages/index/index",
+    "page/component/pages/logs/logs",
+    "page/component/pages/user/user"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FFA500",
+    "navigationBarTitleText": "小程序demo",
+    "navigationBarTextStyle":"#FFFFFF"
+  },
+  "tabBar": {
+    "selectedColor": "#3cc51f",
+    "list": [
+      {
+        "pagePath": "page/component/pages/index/index",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "page/component/pages/logs/logs",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_selected.png",
+        "text": "账单"
+      },
+      {
+        "pagePath": "page/component/pages/user/user",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_selected.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

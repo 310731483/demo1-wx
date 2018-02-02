@@ -1,0 +1,99 @@
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+
+<view class="container">
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-spacing">
+        <view class="flex-wrp" style="flex-direction:row;">
+          <view class="flex-item-V">
+            <view class="page-section">
+              <view class="flex-wrp" style="flex-direction:column;">
+                <view class="flex-item-V ">
+                  <view class="page-section">
+                    <view class="flex-wrp" style="flex-direction:column;">
+                      <view class="flex-item-V index-title">现金额度(元)</view>
+                      <view class="flex-item-V index-money orange">500</view>
+                    </view>
+                  </view>
+                </view>
+                <view class="flex-item-V">
+                  <button class="mini-btn index-btn orange-background" type="primary" size="mini">极速提现</button>
+                </view>
+              </view>
+            </view>
+          </view>
+          
+          <view class="flex-item-V">
+            <view class="page-section">
+              <view class="flex-wrp" style="flex-direction:column;">
+                <view class="flex-item-V ">
+                  <view class="page-section">
+                    <view class="flex-wrp" style="flex-direction:column;">
+                      <view class="flex-item-V index-title">消费额度(元)</view>
+                      <view class="flex-item-V index-money blue">5000</view>
+                    </view>
+                  </view>
+                </view>
+                <view class="flex-item-V">
+                  <button class="mini-btn index-btn blue-background" type="primary" size="mini">消费分期</button>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="notice">
+          <view class="flex-wrp" style="flex-direction:row;">
+            <view class="notice_title">
+             <text class='iconfont icon-tongzhi'></text>
+            系统通知：
+            </view>
+            <view class="bc_red" style="width: 70%">
+              <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2000">
+                <block wx:for="{{msgList}}" wx:key="*this">
+                  <navigator url="/pages/index/index?title={{item.url}}" open-type="navigate">
+                    <swiper-item>
+                      <view class="swiper_item">{{item.title}}</view>
+                    </swiper-item>
+                  </navigator>
+                </block>
+              </swiper>             
+            </view>
+          </view>
+        </view>
+
+        <swiper indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{imgUrls}}" wx:key="*this">
+            <swiper-item style="height: auto" class="swiper-banner">
+              <image src="{{item}}" mode="aspectFill" class="swiper-image" bindtap="showGoods"/>
+            </swiper-item>
+          </block> 
+        </swiper>
+
+        <view class="flex-wrp" style="flex-direction:column; margin-top:15rpx">
+          <view class="column_style">
+            <view class="flex-wrp" style="flex-direction:row;">
+              <view class="view_column row_title">
+                <image class="icon-column" src="../../../../images/u40.png"></image>
+                提升额度
+              </view>
+              <view class="view_column row_subtitle" style="">补充资料  提高额度 ></view>
+            </view>          
+          </view>
+          <view class="column_style">
+            <view class="flex-wrp" style="flex-direction:row;">
+              <view class="view_column row_title">
+                <image class="icon-column" src="../../../../images/u40.png"></image>
+                分期商城
+              </view>
+              <view class="view_column row_subtitle" style="">任性享分期 好货别错过 ></view>
+            </view>             
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>
